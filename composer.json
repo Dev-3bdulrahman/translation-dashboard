@@ -1,0 +1,53 @@
+{
+  "name": "dev-3bdulrahman/translation-dashboard",
+  "description": "Modern Laravel Translation Dashboard",
+  "keywords": [
+    "laravel",
+    "translations",
+    "translator",
+    "dashboard",
+    "i18n"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abdulrahman",
+      "email": "contact@3bdulrahman.com",
+      "homepage": "https://3bdulrahman.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^9|^10|^11|^12",
+    "illuminate/translation": "^9|^10|^11|^12",
+    "symfony/finder": "^6|^7"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7|^8|^9|^10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dev3bdulrahman\\TranslationDashboard\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dev3bdulrahman\\TranslationDashboard\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Dev3bdulrahman\\TranslationDashboard\\ManagerServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
