@@ -1,4 +1,4 @@
-# لوحة تحكم الترجمة | Translation Dashboard
+<h1 align="center">لوحة تحكم الترجمة | Translation Dashboard</h1>
 
 <p align="center">
   <img src="public/assets/package-bg.webp" alt="Translation Dashboard">
