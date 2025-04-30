@@ -12,13 +12,16 @@
   <a href="https://3bdulrahman.com"><img src="https://img.shields.io/badge/Developer-Abdulrahman-blue.svg" alt="Developer"></a>
 </p>
 
-**العربية:**
-هذه لوحة تحكم حديثة لإدارة ملفات ترجمة لارافيل.
-لا تحل محل نظام الترجمة، بل تقوم فقط باستيراد/تصدير ملفات PHP إلى قاعدة بيانات وجعلها قابلة للتحرير من خلال واجهة ويب جميلة ومتجاوبة مع تأثيرات حركية.
+<div align="center">
+  <p><strong>العربية:</strong><br>
+  هذه لوحة تحكم حديثة لإدارة ملفات ترجمة لارافيل.<br>
+  لا تحل محل نظام الترجمة، بل تقوم فقط باستيراد/تصدير ملفات PHP إلى قاعدة بيانات وجعلها قابلة للتحرير من خلال واجهة ويب جميلة ومتجاوبة مع تأثيرات حركية.</p>
 
-**English:**
-This is a modern dashboard to manage Laravel translation files.
-It does not replace the Translation system, only imports/exports PHP files to a database and makes them editable through a beautiful and responsive web interface with animations.
+  <p><strong>English:</strong><br>
+  This is a modern dashboard to manage Laravel translation files.<br>
+  It does not replace the Translation system, only imports/exports PHP files to a database and makes them editable through a beautiful and responsive web interface with animations.</p>
+</div>
+
 **العربية:**
 سير العمل سيكون كالتالي:
 
