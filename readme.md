@@ -4,11 +4,13 @@
   <img src="public/assets/package-bg.webp" alt="Translation Dashboard">
 </p>
 
-[![Tests](https://github.com/Dev-3bdulrahman/translation-dashboard/actions/workflows/run-tests.yml/badge.svg)](https://github.com/Dev-3bdulrahman/translation-dashboard/actions)
+<p align="center">
+[![Build Status](https://travis-ci.org/dev-3bdulrahman/translation-dashboard.svg?branch=master)](https://travis-ci.org/dev-3bdulrahman/translation-dashboard)
 [![Packagist License](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/license.png)](http://choosealicense.com/licenses/mit/)
 [![Latest Stable Version](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/version.png)](https://packagist.org/packages/dev-3bdulrahman/translation-dashboard)
 [![Total Downloads](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/d/total.png)](https://packagist.org/packages/dev-3bdulrahman/translation-dashboard)
 [![Developer](https://img.shields.io/badge/Developer-Abdulrahman-blue.svg)](https://3bdulrahman.com)
+</p>
 
 **العربية:**
 هذه لوحة تحكم حديثة لإدارة ملفات ترجمة لارافيل.
