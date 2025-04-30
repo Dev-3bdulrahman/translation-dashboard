@@ -34,12 +34,17 @@
 
         body {
             background-color: #f8f9fa;
+            background-image: url('/assets/package-bg.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .navbar {
-            background-color: var(--secondary-color) !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(44, 62, 80, 0.9) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .navbar-brand {
@@ -52,6 +57,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
         }
 
         .card:hover {
@@ -111,8 +118,9 @@
         }
 
         .table thead {
-            background-color: var(--secondary-color);
+            background-color: rgba(44, 62, 80, 0.9);
             color: white;
+            backdrop-filter: blur(5px);
         }
 
         .table thead th {
@@ -175,6 +183,15 @@
             font-size: 1.2rem;
             width: auto;
             padding: 0 10px;
+            border-bottom: none;
+        }
+
+        .card-header {
+            background-image: url('/assets/package-bg.webp');
+            background-size: cover;
+            background-position: center;
+            color: white !important;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
             border-bottom: none;
         }
     </style>

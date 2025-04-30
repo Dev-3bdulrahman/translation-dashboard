@@ -16,19 +16,19 @@ It does not replace the Translation system, only imports/exports PHP files to a 
 **العربية:**
 سير العمل سيكون كالتالي:
 
-- استيراد الترجمات: قراءة جميع ملفات الترجمة وحفظها في قاعدة البيانات
-- البحث عن جميع الترجمات في مصادر PHP/Twig
-- تحرير الترجمات من خلال واجهة الويب الجميلة
-- تصدير الترجمات مرة أخرى إلى ملفات PHP
+-   استيراد الترجمات: قراءة جميع ملفات الترجمة وحفظها في قاعدة البيانات
+-   البحث عن جميع الترجمات في مصادر PHP/Twig
+-   تحرير الترجمات من خلال واجهة الويب الجميلة
+-   تصدير الترجمات مرة أخرى إلى ملفات PHP
 
 **English:**
 The workflow would be:
 
-- Import translations: Read all translation files and save them in the database
-- Find all translations in PHP/Twig sources
-    - Optionally: Listen to missing translation with the custom Translator
-    - Translate all keys through the webinterface
-    - Export: Write all translations back to the translation files.
+-   Import translations: Read all translation files and save them in the database
+-   Find all translations in PHP/Twig sources
+    -   Optionally: Listen to missing translation with the custom Translator
+    -   Translate all keys through the webinterface
+    -   Export: Write all translations back to the translation files.
 
 **العربية:**
 بهذه الطريقة، يمكن حفظ الترجمات في تاريخ Git ولا يتم إدخال أي عبء إضافي في بيئة الإنتاج.
@@ -53,7 +53,6 @@ Require this package in your composer.json and run composer update (or run `comp
 ```bash
 composer require dev-3bdulrahman/translation-dashboard
 ```
-
 
 **العربية:**
 تحتاج إلى تشغيل الترحيلات (migrations) لهذه الحزمة.
@@ -96,7 +95,6 @@ You can change the prefix or filter/middleware for the routes. If you want full 
 
 This example will make the translation manager available at `http://yourdomain.com/translations`
 
-
 ```
 
 **ملاحظة:** *هذا مطلوب فقط في لارافيل 8 (وما فوق!)*
@@ -131,7 +129,9 @@ You can also use the commands described below.
 سيقوم أمر الاستيراد بالبحث في app/lang وتحميل جميع النصوص في قاعدة البيانات، حتى تتمكن من إدارتها بسهولة.
 
 ```
+
 php artisan translations:import
+
 ```
 
 سيتم استيراد سلاسل الترجمة من ملفات app/lang/locale.json إلى مجموعة __json_.
@@ -143,7 +143,9 @@ php artisan translations:import
 The import command scans through app/lang and loads all strings into the database, allowing you to manage them easily through the dashboard.
 
 ```
+
 php artisan translations:import
+
 ```
 
 Translation strings from app/lang/locale.json files will be imported to the __json_ group.
@@ -159,7 +161,9 @@ add the `--replace` (or `-R`) option: `php artisan translations:import --replace
 يمكن القيام بذلك من خلال واجهة الويب، أو عبر أمر Artisan.
 
 ```
+
 php artisan translations:find
+
 ```
 
 إذا كان مشروعك يستخدم سلاسل الترجمة كمفاتيح، فسيتم تخزينها في مجموعة __json_.
@@ -170,7 +174,9 @@ The discovered keys are added to the database, making them available for transla
 This can be done through the web interface or via an Artisan command.
 
 ```
+
 php artisan translations:find
+
 ```
 
 If your project uses translation strings as keys, these will be stored in the __json_ group.
@@ -183,7 +189,9 @@ If your project uses translation strings as keys, these will be stored in the __
 قم بتوفير اسم المجموعة لتحديد المجموعات التي تريد نشرها.
 
 ```
+
 php artisan translations:export <group>
+
 ```
 
 على سبيل المثال، `php artisan translations:export reminders` عندما يكون لديك لغتان (en/nl)، سيكتب إلى `app/lang/en/reminders.php` و `app/lang/nl/reminders.php`
@@ -196,7 +204,9 @@ This overwrites existing translations and removes all comments, so be sure to ba
 Specify the group name to define which translation groups you want to publish.
 
 ```
+
 php artisan translations:export <group>
+
 ```
 
 For example, `php artisan translations:export reminders` with two locales (en/nl) will write to `app/lang/en/reminders.php` and `app/lang/nl/reminders.php`
@@ -209,14 +219,18 @@ To export translation strings as keys to JSON files, use the `--json` (or `-J`) 
 سيبحث أمر التنظيف عن جميع الترجمات التي تكون NULL ويحذفها، بحيث تكون واجهتك أكثر نظافة. ملاحظة: لا يتم تصدير الترجمات الفارغة أبدًا.
 
 ```
+
 php artisan translations:clean
+
 ```
 
 **English:**
 The clean command finds all NULL translations and removes them, keeping your interface cleaner. Note: empty translations are never exported.
 
 ```
+
 php artisan translations:clean
+
 ```
 
 ### أمر إعادة التعيين | Reset Command
@@ -225,14 +239,18 @@ php artisan translations:clean
 يقوم أمر إعادة التعيين ببساطة بمسح جميع الترجمات في قاعدة البيانات، حتى تتمكن من البدء من جديد (عن طريق استيراد جديد). تأكد من تصدير عملك إذا لزم الأمر قبل القيام بذلك.
 
 ```
+
 php artisan translations:reset
+
 ```
 
 **English:**
 The reset command clears all translations in the database, allowing you to start fresh (with a new import). Make sure to export your work if needed before running this command.
 
 ```
+
 php artisan translations:reset
+
 ```
 
 
@@ -257,3 +275,4 @@ This package is still very alpha. Few things that are on the todo-list:
     - Improve webinterface (more selection/filtering, behavior of popup after save etc)
     - Seed existing languages (https://github.com/caouecs/Laravel-lang)
     - Suggestions are welcome :)
+```
