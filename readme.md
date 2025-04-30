@@ -1,5 +1,7 @@
 # لوحة تحكم الترجمة | Translation Dashboard
 
+![Translation Dashboard](public/assets/package-bg.webp)
+
 [![Tests](https://github.com/Dev-3bdulrahman/translation-dashboard/actions/workflows/run-tests.yml/badge.svg)](https://github.com/Dev-3bdulrahman/translation-dashboard/actions)
 [![Packagist License](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/license.png)](http://choosealicense.com/licenses/mit/)
 [![Latest Stable Version](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/version.png)](https://packagist.org/packages/dev-3bdulrahman/translation-dashboard)
