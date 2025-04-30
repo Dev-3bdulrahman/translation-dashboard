@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-[![Build Status](https://travis-ci.org/dev-3bdulrahman/translation-dashboard.svg?branch=master)](https://travis-ci.org/dev-3bdulrahman/translation-dashboard)
-[![Packagist License](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/license.png)](http://choosealicense.com/licenses/mit/)
-[![Latest Stable Version](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/version.png)](https://packagist.org/packages/dev-3bdulrahman/translation-dashboard)
-[![Total Downloads](https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/d/total.png)](https://packagist.org/packages/dev-3bdulrahman/translation-dashboard)
-[![Developer](https://img.shields.io/badge/Developer-Abdulrahman-blue.svg)](https://3bdulrahman.com)
+  <a href="https://travis-ci.org/dev-3bdulrahman/translation-dashboard"><img src="https://travis-ci.org/dev-3bdulrahman/translation-dashboard.svg?branch=master" alt="Build Status"></a>
+  <a href="http://choosealicense.com/licenses/mit/"><img src="https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/license.png" alt="Packagist License"></a>
+  <a href="https://packagist.org/packages/dev-3bdulrahman/translation-dashboard"><img src="https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/version.png" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/dev-3bdulrahman/translation-dashboard"><img src="https://poser.pugx.org/dev-3bdulrahman/translation-dashboard/d/total.png" alt="Total Downloads"></a>
+  <a href="https://3bdulrahman.com"><img src="https://img.shields.io/badge/Developer-Abdulrahman-blue.svg" alt="Developer"></a>
 </p>
 
 **العربية:**
