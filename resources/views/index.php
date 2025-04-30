@@ -35,37 +35,58 @@
         body {
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.9rem;
         }
 
         .navbar {
             background-color: var(--secondary-color) !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 1rem;
         }
 
         .navbar-brand {
             font-weight: bold;
             color: white !important;
+            font-size: 1.1rem;
         }
 
         .card {
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+            transition: all 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .card-body {
+            padding: 0.75rem 1rem;
         }
 
         .btn {
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            border-radius: 4px;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary {
@@ -89,25 +110,41 @@
         }
 
         .alert {
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+            padding: 0.75rem;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
         }
 
         .form-control {
-            border-radius: 5px;
+            border-radius: 4px;
             border: 1px solid #ced4da;
-            padding: 10px 15px;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.85rem;
+            height: auto;
         }
 
-        .form-control:focus {
+        .form-select {
+            height: auto;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        .form-control:focus, .form-select:focus {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+            box-shadow: 0 0 0 0.15rem rgba(52, 152, 219, 0.25);
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
         }
 
         .table {
-            border-radius: 8px;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            font-size: 0.85rem;
         }
 
         .table thead {
@@ -116,8 +153,14 @@
         }
 
         .table thead th {
-            font-weight: 600;
+            font-weight: 500;
             border-bottom: none;
+            padding: 0.5rem;
+        }
+
+        .table tbody td {
+            padding: 0.5rem;
+            vertical-align: middle;
         }
 
         .table tbody tr:hover {
@@ -125,12 +168,12 @@
         }
 
         a.status-1 {
-            font-weight: bold;
+            font-weight: 500;
             color: var(--primary-color);
         }
 
         .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
+            animation: fadeIn 0.3s ease-in-out;
         }
 
         @keyframes fadeIn {
@@ -139,15 +182,56 @@
         }
 
         .section-title {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 10px;
-            margin-bottom: 20px;
-            font-weight: 600;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 8px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 1rem;
         }
 
         .list-locales {
             list-style: none;
             padding-left: 0;
+        }
+
+        /* Reduce icon sizes */
+        .fs-4 {
+            font-size: 1rem !important;
+        }
+
+        /* Optimize animations */
+        .animate__animated {
+            animation-duration: 0.3s !important;
+        }
+
+        /* Make editable fields more compact */
+        .editable-container.editable-inline {
+            font-size: 0.85rem;
+        }
+
+        .editable-input textarea.form-control {
+            min-height: 60px;
+            font-size: 0.85rem;
+        }
+
+        /* Reduce spacing */
+        .mb-3 {
+            margin-bottom: 0.75rem !important;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem !important;
+        }
+
+        /* Hide hover animations on mobile */
+        @media (max-width: 768px) {
+            .card:hover {
+                transform: none;
+            }
+
+            .btn:hover {
+                transform: none;
+            }
         }
 
         .list-locales li {
@@ -199,7 +283,7 @@
             // Setup AJAX with CSRF token
             $.ajaxSetup({
                 beforeSend: function(xhr, settings) {
-                    settings.data += "&_token=<?php echo csrf_token() ?>";
+                    settings.data += "&_token=<?php echo csrf_token(); ?>";
                 }
             });
 
@@ -231,13 +315,18 @@
                 }
             });
 
-            // Group selection with animation
+            // Group selection with immediate redirect
             $('.group-select').on('change', function(){
                 var group = $(this).val();
+                // Disable the select to prevent multiple selections
+                $(this).prop('disabled', true);
+                // Add loading indicator
+                $(this).after('<span class="ms-2 spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+                // Immediate redirect without animations
                 if (group) {
-                    window.location.href = '<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getView') ?>/'+$(this).val();
+                    window.location.href = '<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getView'); ?>/'+group;
                 } else {
-                    window.location.href = '<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex') ?>';
+                    window.location.href = '<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex'); ?>';
                 }
             });
 
@@ -323,7 +412,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark mb-4 animate__animated animate__fadeIn">
     <div class="container-fluid">
-        <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex') ?>" class="navbar-brand">
+        <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex'); ?>" class="navbar-brand">
             <i class="fas fa-language me-2"></i> Translation Dashboard
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -341,163 +430,162 @@
     </div>
 </nav>
 <div class="container-fluid">
-    <div class="card mb-4 animate__animated animate__fadeIn">
-        <div class="card-body">
-            <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-info-circle text-primary me-2 fs-4"></i>
-                <h5 class="mb-0">Important Note</h5>
-            </div>
-            <p class="mb-0">Translations are not visible until they are exported back to the app/lang file, using <code>php artisan translation:export</code> command or publish button.</p>
+    <div class="alert alert-info mb-3">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-info-circle text-primary me-2"></i>
+            <small>Translations are not visible until they are exported back to the app/lang file, using <code>php artisan translation:export</code> command or publish button.</small>
         </div>
     </div>
 
-    <div class="alert alert-success success-import animate__animated animate__fadeInDown" style="display:none;">
-        <div class="d-flex">
-            <div class="me-3"><i class="fas fa-check-circle fs-4"></i></div>
-            <p class="mb-0">Done importing, processed <strong class="counter">N</strong> items! Reload this page to refresh the groups!</p>
+    <div class="alert alert-success success-import animate__animated animate__fadeInDown py-2" style="display:none;">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-check-circle me-2"></i>
+            <small>Done importing, processed <strong class="counter">N</strong> items! Reload this page to refresh the groups!</small>
         </div>
     </div>
 
-    <div class="alert alert-success success-find animate__animated animate__fadeInDown" style="display:none;">
-        <div class="d-flex">
-            <div class="me-3"><i class="fas fa-search fs-4"></i></div>
-            <p class="mb-0">Done searching for translations, found <strong class="counter">N</strong> items!</p>
+    <div class="alert alert-success success-find animate__animated animate__fadeInDown py-2" style="display:none;">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-search me-2"></i>
+            <small>Done searching for translations, found <strong class="counter">N</strong> items!</small>
         </div>
     </div>
 
-    <div class="alert alert-success success-publish animate__animated animate__fadeInDown" style="display:none;">
-        <div class="d-flex">
-            <div class="me-3"><i class="fas fa-upload fs-4"></i></div>
-            <p class="mb-0">Done publishing the translations for group '<?php echo $group ?>'!</p>
+    <div class="alert alert-success success-publish animate__animated animate__fadeInDown py-2" style="display:none;">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-upload me-2"></i>
+            <small>Done publishing the translations for group '<?php echo $group; ?>'!</small>
         </div>
     </div>
 
-    <div class="alert alert-success success-publish-all animate__animated animate__fadeInDown" style="display:none;">
-        <div class="d-flex">
-            <div class="me-3"><i class="fas fa-upload fs-4"></i></div>
-            <p class="mb-0">Done publishing the translations for all groups!</p>
+    <div class="alert alert-success success-publish-all animate__animated animate__fadeInDown py-2" style="display:none;">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-upload me-2"></i>
+            <small>Done publishing the translations for all groups!</small>
         </div>
     </div>
 
-    <?php if(Session::has('successPublish')) : ?>
-        <div class="alert alert-info animate__animated animate__fadeInDown">
-            <div class="d-flex">
-                <div class="me-3"><i class="fas fa-info-circle fs-4"></i></div>
-                <p class="mb-0"><?php echo Session::get('successPublish'); ?></p>
+    <?php if (Session::has('successPublish')) { ?>
+        <div class="alert alert-info animate__animated animate__fadeInDown py-2">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-info-circle me-2"></i>
+                <small><?php echo Session::get('successPublish'); ?></small>
             </div>
         </div>
-    <?php endif; ?>
+    <?php } ?>
     <p>
-        <?php if(!isset($group)) : ?>
-        <form class="form-import" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postImport') ?>" data-remote="true" role="form">
+        <?php if (!isset($group)) { ?>
+        <form class="form-import" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postImport'); ?>" data-remote="true" role="form">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="card mb-4 animate__animated animate__fadeIn">
                 <div class="card-header bg-primary text-white">
                     <i class="fas fa-file-import me-2"></i> Import Translations
                 </div>
-                <div class="card-body">
-                    <div class="row g-3 align-items-center">
+                <div class="card-body py-2">
+                    <div class="row g-2 align-items-center">
                         <div class="col-md-4">
-                            <select name="replace" class="form-select">
+                            <select name="replace" class="form-select form-select-sm">
                                 <option value="0">Append new translations</option>
                                 <option value="1">Replace existing translations</option>
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <button type="submit" class="btn btn-success w-100" data-disable-with="Loading..">
-                                <i class="fas fa-file-import me-2"></i> Import Groups
+                            <button type="submit" class="btn btn-sm btn-success w-100" data-disable-with="Loading..">
+                                <i class="fas fa-file-import me-1"></i> Import Groups
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-        <form class="form-find" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postFind') ?>" data-remote="true" role="form" data-confirm="Are you sure you want to scan you app folder? All found translation keys will be added to the database.">
+        <form class="form-find" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postFind'); ?>" data-remote="true" role="form" data-confirm="Are you sure you want to scan you app folder? All found translation keys will be added to the database.">
             <div class="card mb-4 animate__animated animate__fadeIn">
                 <div class="card-header bg-info text-white">
                     <i class="fas fa-search me-2"></i> Find Translations
                 </div>
-                <div class="card-body">
+                <div class="card-body py-2">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                    <button type="submit" class="btn btn-info" data-disable-with="Searching..">
-                        <i class="fas fa-search me-2"></i> Find Translations in Files
-                    </button>
-                    <small class="text-muted ms-2">This will scan your app folder for translation keys.</small>
+                    <div class="d-flex align-items-center">
+                        <button type="submit" class="btn btn-sm btn-info" data-disable-with="Searching..">
+                            <i class="fas fa-search me-1"></i> Find Translations
+                        </button>
+                        <small class="text-muted ms-2">This will scan your app folder for translation keys.</small>
+                    </div>
                 </div>
             </div>
         </form>
-        <?php endif; ?>
-        <?php if(isset($group)) : ?>
+        <?php } ?>
+        <?php if (isset($group)) { ?>
             <div class="card mb-4 animate__animated animate__fadeIn">
                 <div class="card-header bg-primary text-white">
                     <i class="fas fa-upload me-2"></i> Publish Translations
                 </div>
-                <div class="card-body">
-                    <form class="form-publish" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postPublish', $group) ?>" data-remote="true" role="form" data-confirm="Are you sure you want to publish the translations group '<?php echo $group ?>? This will overwrite existing language files.">
+                <div class="card-body py-2">
+                    <form class="form-publish" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postPublish', $group); ?>" data-remote="true" role="form" data-confirm="Are you sure you want to publish the translations group '<?php echo $group; ?>? This will overwrite existing language files.">
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div class="d-flex gap-2">
-                            <button type="submit" class="btn btn-primary" data-disable-with="Publishing..">
-                                <i class="fas fa-upload me-2"></i> Publish Translations
+                            <button type="submit" class="btn btn-sm btn-primary" data-disable-with="Publishing..">
+                                <i class="fas fa-upload me-1"></i> Publish Translations
                             </button>
-                            <a href="<?= action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex') ?>" class="btn btn-outline-secondary">
-                                <i class="fas fa-arrow-left me-2"></i> Back
+                            <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex'); ?>" class="btn btn-sm btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-1"></i> Back
                             </a>
                         </div>
                     </form>
                 </div>
             </div>
-        <?php endif; ?>
+        <?php } ?>
     </p>
     <div class="card mb-4 animate__animated animate__fadeIn">
         <div class="card-header bg-secondary text-white">
             <i class="fas fa-layer-group me-2"></i> Translation Groups
         </div>
-        <div class="card-body">
-            <form role="form" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAddGroup') ?>">
+        <div class="card-body py-3">
+            <form role="form" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAddGroup'); ?>">
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                <div class="mb-3">
-                    <p>Choose a group to display the group translations. If no groups are visible, make sure you have run the migrations and imported the translations.</p>
-                    <select name="group" id="group" class="form-select group-select">
-                        <?php foreach($groups as $key => $value): ?>
-                            <option value="<?php echo $key ?>"<?php echo $key == $group ? ' selected':'' ?>><?php echo $value ?></option>
-                        <?php endforeach; ?>
+                <div class="mb-2">
+                    <small class="text-muted d-block mb-1">Choose a group to display the group translations. If no groups are visible, make sure you have run the migrations and imported the translations.</small>
+                    <select name="group" id="group" class="form-select form-select-sm group-select">
+                        <?php foreach ($groups as $key => $value) { ?>
+                            <option value="<?php echo $key; ?>"<?php echo $key == $group ? ' selected' : ''; ?>><?php echo $value; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Enter a new group name and start edit translations in that group</label>
-                    <input type="text" class="form-control" name="new-group" placeholder="New group name" />
-                </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary" name="add-group">
-                        <i class="fas fa-plus-circle me-2"></i> Add and Edit Keys
-                    </button>
+                <div class="mb-2">
+                    <label class="form-label small">Enter a new group name and start edit translations in that group</label>
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" name="new-group" placeholder="New group name" />
+                        <button type="submit" class="btn btn-primary" name="add-group">
+                            <i class="fas fa-plus-circle me-1"></i> Add Group
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
-    <?php if($group): ?>
+    <?php if ($group) { ?>
         <div class="card mb-4 animate__animated animate__fadeIn">
             <div class="card-header bg-success text-white">
                 <i class="fas fa-key me-2"></i> Add New Keys
             </div>
-            <div class="card-body">
-                <form action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAdd', array($group)) ?>" method="POST" role="form">
+            <div class="card-body py-2">
+                <form action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAdd', [$group]); ?>" method="POST" role="form">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                    <div class="mb-3">
-                        <label class="form-label">Add new keys to this group</label>
-                        <textarea class="form-control" rows="3" name="keys" placeholder="Add 1 key per line, without the group prefix"></textarea>
+                    <div class="mb-2">
+                        <label class="form-label small">Add new keys to this group</label>
+                        <textarea class="form-control form-control-sm" rows="2" name="keys" placeholder="Add 1 key per line, without the group prefix"></textarea>
                     </div>
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-plus-circle me-2"></i> Add Keys
+                    <div>
+                        <button type="submit" class="btn btn-sm btn-success">
+                            <i class="fas fa-plus-circle me-1"></i> Add Keys
                         </button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="d-grid gap-2 col-md-4 mb-4">
-            <button class="btn btn-outline-primary enable-auto-translate-group animate__animated animate__pulse animate__infinite">
-                <i class="fas fa-language me-2"></i> Use Auto Translate
+        <div class="d-grid gap-2 col-md-3 mb-3">
+            <button class="btn btn-sm btn-outline-primary enable-auto-translate-group">
+                <i class="fas fa-language me-1"></i> Use Auto Translate
             </button>
         </div>
         <div class="card mb-4 animate__animated animate__fadeIn autotranslate-block-group hidden">
@@ -505,31 +593,31 @@
                 <i class="fas fa-language me-2"></i> Auto Translate
             </div>
             <div class="card-body">
-                <form class="form-add-locale" method="POST" role="form" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postTranslateMissing') ?>">
+                <form class="form-add-locale" method="POST" role="form" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postTranslateMissing'); ?>">
                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="base-locale" class="form-label">Base Locale for Auto Translations</label>
                                 <select name="base-locale" id="base-locale" class="form-select">
-                                    <?php foreach ($locales as $locale): ?>
-                                        <option value="<?= $locale ?>"><?= $locale ?></option>
-                                    <?php endforeach; ?>
+                                    <?php foreach ($locales as $locale) { ?>
+                                        <option value="<?php echo $locale; ?>"><?php echo $locale; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="new-locale" class="form-label">Enter target locale key</label>
                                 <input type="text" name="new-locale" class="form-control" id="new-locale" placeholder="Enter target locale key" />
                             </div>
-                            <?php if(!config('laravel_google_translate.google_translate_api_key')): ?>
+                            <?php if (!config('laravel_google_translate.google_translate_api_key')) { ?>
                                 <div class="alert alert-warning">
                                     <i class="fas fa-exclamation-triangle me-2"></i>
                                     If you would like to use Google Translate API, install tanmuhittin/laravel-google-translate and enter your Google Translate API key to config file laravel_google_translate
                                 </div>
-                            <?php endif; ?>
+                            <?php } ?>
                             <div class="mb-3">
                                 <input type="hidden" name="with-translations" value="1">
-                                <input type="hidden" name="file" value="<?= $group ?>">
+                                <input type="hidden" name="file" value="<?php echo $group; ?>">
                                 <button type="submit" class="btn btn-info w-100" data-disable-with="Translating..">
                                     <i class="fas fa-language me-2"></i> Auto Translate Missing Translations
                                 </button>
@@ -546,8 +634,8 @@
                 <i class="fas fa-table me-2"></i> Translations
             </div>
             <div class="badge bg-light text-dark">
-                Total: <span class="badge bg-primary"><?= $numTranslations ?></span>
-                Changed: <span class="badge bg-warning"><?= $numChanged ?></span>
+                Total: <span class="badge bg-primary"><?php echo $numTranslations; ?></span>
+                Changed: <span class="badge bg-warning"><?php echo $numChanged; ?></span>
             </div>
         </div>
         <div class="card-body p-0">
@@ -556,50 +644,50 @@
                     <thead class="table-dark" style="position: sticky; top: 0; z-index: 1;">
                     <tr>
                         <th width="15%">Key</th>
-                        <?php foreach ($locales as $locale): ?>
-                            <th><?= $locale ?></th>
-                        <?php endforeach; ?>
-                        <?php if ($deleteEnabled): ?>
+                        <?php foreach ($locales as $locale) { ?>
+                            <th><?php echo $locale; ?></th>
+                        <?php } ?>
+                        <?php if ($deleteEnabled) { ?>
                             <th width="5%"><i class="fas fa-trash"></i></th>
-                        <?php endif; ?>
+                        <?php } ?>
                     </tr>
                     </thead>
                     <tbody class="animate__animated animate__fadeIn">
 
-            <?php foreach ($translations as $key => $translation): ?>
-                <tr id="<?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false) ?>">
-                    <td><?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false) ?></td>
-                    <?php foreach ($locales as $locale): ?>
-                        <?php $t = isset($translation[$locale]) ? $translation[$locale] : null ?>
+            <?php foreach ($translations as $key => $translation) { ?>
+                <tr id="<?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false); ?>">
+                    <td><?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false); ?></td>
+                    <?php foreach ($locales as $locale) { ?>
+                        <?php $t = isset($translation[$locale]) ? $translation[$locale] : null; ?>
 
                         <td>
                             <a href="#edit"
-                               class="editable status-<?php echo $t ? $t->status : 0 ?> locale-<?php echo $locale ?>"
-                               data-locale="<?php echo $locale ?>" data-name="<?php echo $locale . "|" . htmlentities($key, ENT_QUOTES, 'UTF-8', false) ?>"
-                               id="username" data-type="textarea" data-pk="<?php echo $t ? $t->id : 0 ?>"
-                               data-url="<?php echo $editUrl ?>"
-                               data-title="Enter translation"><?php echo $t ? htmlentities($t->value, ENT_QUOTES, 'UTF-8', false) : '' ?></a>
+                               class="editable status-<?php echo $t ? $t->status : 0; ?> locale-<?php echo $locale; ?>"
+                               data-locale="<?php echo $locale; ?>" data-name="<?php echo $locale.'|'.htmlentities($key, ENT_QUOTES, 'UTF-8', false); ?>"
+                               id="username" data-type="textarea" data-pk="<?php echo $t ? $t->id : 0; ?>"
+                               data-url="<?php echo $editUrl; ?>"
+                               data-title="Enter translation"><?php echo $t ? htmlentities($t->value, ENT_QUOTES, 'UTF-8', false) : ''; ?></a>
                         </td>
-                    <?php endforeach; ?>
-                    <?php if ($deleteEnabled): ?>
+                    <?php } ?>
+                    <?php if ($deleteEnabled) { ?>
                         <td class="text-center">
-                            <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postDelete', [$group, $key]) ?>"
+                            <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postDelete', [$group, $key]); ?>"
                                class="delete-key btn btn-sm btn-outline-danger"
                                data-bs-toggle="tooltip"
                                title="Delete this translation"
-                               data-confirm="Are you sure you want to delete the translations for '<?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false) ?>?'">
+                               data-confirm="Are you sure you want to delete the translations for '<?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false); ?>?'">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>
-                    <?php endif; ?>
+                    <?php } ?>
                 </tr>
-            <?php endforeach; ?>
+            <?php } ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <?php else: ?>
+    <?php } else { ?>
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4 animate__animated animate__fadeIn">
@@ -608,21 +696,21 @@
                     </div>
                     <div class="card-body">
                         <p>Current supported locales:</p>
-                        <form class="form-remove-locale" method="POST" role="form" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postRemoveLocale') ?>" data-confirm="Are you sure to remove this locale and all of data?">
+                        <form class="form-remove-locale" method="POST" role="form" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postRemoveLocale'); ?>" data-confirm="Are you sure to remove this locale and all of data?">
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                             <div class="list-group mb-4">
-                                <?php foreach($locales as $locale): ?>
+                                <?php foreach ($locales as $locale) { ?>
                                     <div class="list-group-item d-flex justify-content-between align-items-center animate__animated animate__fadeIn">
-                                        <span><i class="fas fa-language me-2"></i> <?php echo $locale ?></span>
-                                        <button type="submit" name="remove-locale[<?php echo $locale ?>]" class="btn btn-sm btn-danger" data-disable-with="...">
+                                        <span><i class="fas fa-language me-2"></i> <?php echo $locale; ?></span>
+                                        <button type="submit" name="remove-locale[<?php echo $locale; ?>]" class="btn btn-sm btn-danger" data-disable-with="...">
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </div>
-                                <?php endforeach; ?>
+                                <?php } ?>
                             </div>
                         </form>
 
-                        <form class="form-add-locale" method="POST" role="form" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAddLocale') ?>">
+                        <form class="form-add-locale" method="POST" role="form" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAddLocale'); ?>">
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                             <div class="mb-3">
                                 <label class="form-label">Enter new locale key:</label>
@@ -644,7 +732,7 @@
                     </div>
                     <div class="card-body">
                         <p>Export all translations to language files:</p>
-                        <form class="form-publish-all" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postPublish', '*') ?>" data-remote="true" role="form" data-confirm="Are you sure you want to publish all translations group? This will overwrite existing language files.">
+                        <form class="form-publish-all" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postPublish', '*'); ?>" data-remote="true" role="form" data-confirm="Are you sure you want to publish all translations group? This will overwrite existing language files.">
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                             <button type="submit" class="btn btn-success" data-disable-with="Publishing..">
                                 <i class="fas fa-file-export me-2"></i> Publish All Translations
@@ -655,7 +743,7 @@
             </div>
         </div>
 
-    <?php endif; ?>
+    <?php } ?>
 </div>
 
 </body>
