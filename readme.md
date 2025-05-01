@@ -95,8 +95,24 @@ php artisan vendor:publish --provider="Dev3bdulrahman\TranslationDashboard\Manag
 
 In order to edit the default template, the views must be published as well. The views will then be placed in `resources/views/vendor/translation-manager`.
 
-```
+```bash
 php artisan vendor:publish --provider="Dev3bdulrahman\TranslationDashboard\ManagerServiceProvider" --tag=views
+```
+
+**العربية:**
+يمكنك أيضًا استخدام أوامر Artisan المخصصة لنشر الأصول والإعدادات:
+
+```bash
+php artisan translations:publish-config
+php artisan translations:publish-assets
+```
+
+**English:**
+You can also use dedicated Artisan commands to publish assets and configuration:
+
+```bash
+php artisan translations:publish-config
+php artisan translations:publish-assets
 ```
 
 Routes are added in the ServiceProvider. You can set the group parameters for the routes in the configuration.

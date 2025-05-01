@@ -52,6 +52,16 @@ class ManagerServiceProvider extends ServiceProvider {
             return new Console\CleanCommand($app['translation-manager']);
         });
         $this->commands('command.translation-manager.clean');
+
+        $this->app->singleton('command.translation-manager.publish-assets', function ($app) {
+            return new Console\PublishAssetsCommand();
+        });
+        $this->commands('command.translation-manager.publish-assets');
+
+        $this->app->singleton('command.translation-manager.publish-config', function ($app) {
+            return new Console\PublishConfigCommand();
+        });
+        $this->commands('command.translation-manager.publish-config');
 	}
 
     /**
@@ -72,6 +82,11 @@ class ManagerServiceProvider extends ServiceProvider {
             $migrationPath => base_path('database/migrations'),
         ], 'migrations');
 
+        // Publish assets
+        $this->publishes([
+            __DIR__.'/../public' => public_path('vendor/translation-dashboard'),
+        ], 'assets');
+
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 	}
 
@@ -87,7 +102,9 @@ class ManagerServiceProvider extends ServiceProvider {
             'command.translation-manager.import',
             'command.translation-manager.find',
             'command.translation-manager.export',
-            'command.translation-manager.clean'
+            'command.translation-manager.clean',
+            'command.translation-manager.publish-assets',
+            'command.translation-manager.publish-config'
         );
 	}
 

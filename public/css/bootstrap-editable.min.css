@@ -1,0 +1,6 @@
+/*
+ * Bootstrap Editable - Inline editing with Bootstrap
+ * Copyright (c) 2023
+ * https://github.com/bootstrap-editable
+ */
+.editable{cursor:pointer;border-bottom:1px dashed #0d6efd;display:inline-block}.editable:hover{background-color:rgba(13,110,253,.1)}.editable-form{margin-top:5px;margin-bottom:5px}.editable-form textarea{min-height:60px}.editable-buttons{display:flex}.status-0{color:#dc3545}.status-1{color:#198754;font-weight:500}
