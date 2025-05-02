@@ -1,6 +1,5 @@
 <?php namespace Dev3bdulrahman\TranslationDashboard;
 
-use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 class ManagerServiceProvider extends ServiceProvider {
@@ -53,12 +52,12 @@ class ManagerServiceProvider extends ServiceProvider {
         });
         $this->commands('command.translation-manager.clean');
 
-        $this->app->singleton('command.translation-manager.publish-assets', function ($app) {
+        $this->app->singleton('command.translation-manager.publish-assets', function () {
             return new Console\PublishAssetsCommand();
         });
         $this->commands('command.translation-manager.publish-assets');
 
-        $this->app->singleton('command.translation-manager.publish-config', function ($app) {
+        $this->app->singleton('command.translation-manager.publish-config', function () {
             return new Console\PublishConfigCommand();
         });
         $this->commands('command.translation-manager.publish-config');
@@ -84,7 +83,7 @@ class ManagerServiceProvider extends ServiceProvider {
 
         // Publish assets
         $this->publishes([
-            __DIR__.'/../public' => public_path('vendor/translation-dashboard'),
+            __DIR__.'/../resources/assets' => public_path('translation-dashboard'),
         ], 'assets');
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');

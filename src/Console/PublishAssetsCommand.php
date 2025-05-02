@@ -12,7 +12,7 @@ class PublishAssetsCommand extends Command
      *
      * @var string
      */
-    protected $name = 'translations:publish-assets';
+    protected $name = 'translation:publish-assets';
 
     /**
      * The console command description.
@@ -28,13 +28,23 @@ class PublishAssetsCommand extends Command
     {
         $this->info('Publishing Translation Dashboard assets...');
 
+        // Create the directories if they don't exist
+        if (!is_dir(public_path('translation-dashboard/css'))) {
+            mkdir(public_path('translation-dashboard/css'), 0755, true);
+        }
+
+        if (!is_dir(public_path('translation-dashboard/js'))) {
+            mkdir(public_path('translation-dashboard/js'), 0755, true);
+        }
+
+        // Copy the assets
         $this->call('vendor:publish', [
             '--provider' => 'Dev3bdulrahman\TranslationDashboard\ManagerServiceProvider',
             '--tag' => 'assets',
             '--force' => $this->option('force'),
         ]);
 
-        $this->info('Translation Dashboard assets published successfully!');
+        $this->info('Translation Dashboard assets published successfully to: ' . public_path('translation-dashboard'));
     }
 
     /**
