@@ -22,27 +22,39 @@ A user-friendly dashboard for managing Laravel application translations.
 composer require dev-3bdulrahman/translation-dashboard
 ```
 
-2. Publish the configuration file:
+**العربية:**
+عند تثبيت الباكج، سيتم تلقائيًا:
+- نشر ملفات الإعدادات
+- نشر الأصول (CSS، JavaScript، الصور)
 
-```bash
-php artisan translation:publish-config
-```
+ومع ذلك، ستحتاج إلى تنفيذ الخطوة التالية يدويًا:
 
-3. Run the migrations:
+2. تشغيل الترحيلات:
 
 ```bash
 php artisan migrate
 ```
 
-4. Publish the assets:
+**English:**
+When installing the package, it will automatically:
+- Publish configuration files
+- Publish assets (CSS, JavaScript, images)
+
+However, you'll need to manually run the following step:
+
+2. Run the migrations:
 
 ```bash
-php artisan translation:publish-assets
+php artisan migrate
 ```
 
-This command will copy all required CSS and JavaScript files to the `public/translation-dashboard` directory. The package will automatically use these local assets instead of loading them from CDN.
-
-> **Note:** If you don't publish the assets, the package will fall back to using CDN resources.
+> **Note:** If you need to republish assets or configuration, you can use these commands:
+> ```bash
+> php artisan translation:publish-config
+> php artisan translation:publish-assets
+> ```
+>
+> The assets will be copied to the `public/translation-dashboard` directory. The package will automatically use these local assets instead of loading them from CDN.
 
 ## Usage
 

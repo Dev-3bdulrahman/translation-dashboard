@@ -46,7 +46,20 @@
     }
   },
   "scripts": {
-    "test": "phpunit"
+    "test": "phpunit",
+    "post-package-install": [
+      "@php artisan translations:publish-config --ansi",
+      "@php artisan translations:publish-assets --ansi"
+    ],
+    "post-update-cmd": [
+      "@php artisan translations:publish-config --ansi",
+      "@php artisan translations:publish-assets --ansi"
+    ],
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan translations:publish-config --ansi",
+      "@php artisan translations:publish-assets --ansi"
+    ]
   },
   "minimum-stability": "dev",
   "prefer-stable": true
