@@ -23,35 +23,32 @@ composer require dev-3bdulrahman/translation-dashboard
 ```
 
 **العربية:**
-عند تثبيت الباكج، سيتم تلقائيًا:
-- نشر ملفات الإعدادات
-- نشر الأصول (CSS، JavaScript، الصور)
+عند تثبيت الباكج، سيتم تنفيذ جميع الأوامر التالية تلقائيًا:
+- نشر ملفات الإعدادات (`php artisan translations:publish-config`)
+- نشر الأصول (`php artisan translations:publish-assets`)
+- تشغيل الترحيلات (`php artisan migrate`)
+- استيراد الترجمات الموجودة (`php artisan translation:import`)
+- البحث عن مفاتيح الترجمة في التطبيق (`php artisan translation:find`)
 
-ومع ذلك، ستحتاج إلى تنفيذ الخطوة التالية يدويًا:
-
-2. تشغيل الترحيلات:
-
-```bash
-php artisan migrate
-```
+لا تحتاج إلى تنفيذ أي أوامر يدويًا، فقط قم بتثبيت الباكج وستكون جاهزًا للاستخدام مباشرة!
 
 **English:**
-When installing the package, it will automatically:
-- Publish configuration files
-- Publish assets (CSS, JavaScript, images)
+When installing the package, all of the following commands will be executed automatically:
+- Publish configuration files (`php artisan translations:publish-config`)
+- Publish assets (`php artisan translations:publish-assets`)
+- Run migrations (`php artisan migrate`)
+- Import existing translations (`php artisan translation:import`)
+- Find translation keys in your application (`php artisan translation:find`)
 
-However, you'll need to manually run the following step:
+You don't need to run any commands manually - just install the package and you're ready to go!
 
-2. Run the migrations:
-
-```bash
-php artisan migrate
-```
-
-> **Note:** If you need to republish assets or configuration, you can use these commands:
+> **Note:** If you need to re-run any of these commands later, you can execute them manually:
 > ```bash
-> php artisan translation:publish-config
-> php artisan translation:publish-assets
+> php artisan translations:publish-config
+> php artisan translations:publish-assets
+> php artisan migrate
+> php artisan translation:import
+> php artisan translation:find
 > ```
 >
 > The assets will be copied to the `public/translation-dashboard` directory. The package will automatically use these local assets instead of loading them from CDN.
