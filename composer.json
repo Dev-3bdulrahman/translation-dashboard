@@ -1,6 +1,7 @@
 {
   "name": "dev-3bdulrahman/translation-dashboard",
   "description": "Modern Laravel Translation Dashboard",
+  "version": "0.1.0",
   "keywords": [
     "laravel",
     "translations",
@@ -12,7 +13,7 @@
   "authors": [
     {
       "name": "Abdulrahman",
-      "email": "contact@3bdulrahman.com",
+      "email": "me@3bdulrahman.com",
       "homepage": "https://3bdulrahman.com"
     }
   ],
@@ -37,7 +38,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.1-dev"
+      "dev-master": "0.1.x-dev"
     },
     "laravel": {
       "providers": [
