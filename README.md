@@ -25,7 +25,7 @@ composer require dev-3bdulrahman/translation-dashboard
 **العربية:**
 عند تثبيت الباكج، سيتم تنفيذ جميع الأوامر التالية تلقائيًا:
 - نشر ملفات الإعدادات (`php artisan translations:publish-config`)
-- نشر الأصول (`php artisan translations:publish-assets`)
+- نشر الأصول (`php artisan translation:publish-assets`)
 - تشغيل الترحيلات (`php artisan migrate`)
 - استيراد الترجمات الموجودة (`php artisan translation:import`)
 - البحث عن مفاتيح الترجمة في التطبيق (`php artisan translation:find`)
