@@ -5,46 +5,36 @@ namespace Dev3bdulrahman\TranslationDashboard\Console;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 
-class PublishAssetsCommand extends Command
+class PublishMigrationsCommand extends Command
 {
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'translations:publish-assets';
+    protected $name = 'translations:publish-migrations';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Publish assets (CSS, JS, images) for the Translation Dashboard';
+    protected $description = 'Publish migration files for the Translation Dashboard';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $this->info('Publishing Translation Dashboard assets...');
+        $this->info('Publishing Translation Dashboard migrations...');
 
-        // Create the directories if they don't exist
-        if (!is_dir(public_path('translation-dashboard/css'))) {
-            mkdir(public_path('translation-dashboard/css'), 0755, true);
-        }
-
-        if (!is_dir(public_path('translation-dashboard/js'))) {
-            mkdir(public_path('translation-dashboard/js'), 0755, true);
-        }
-
-        // Copy the assets
         $this->call('vendor:publish', [
             '--provider' => 'Dev3bdulrahman\TranslationDashboard\ManagerServiceProvider',
-            '--tag' => 'assets',
+            '--tag' => 'migrations',
             '--force' => $this->option('force'),
         ]);
 
-        $this->info('Translation Dashboard assets published successfully to: ' . public_path('translation-dashboard'));
+        $this->info('Translation Dashboard migrations published successfully!');
     }
 
     /**

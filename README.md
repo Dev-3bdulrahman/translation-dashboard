@@ -25,7 +25,8 @@ composer require dev-3bdulrahman/translation-dashboard
 **العربية:**
 عند تثبيت الباكج، سيتم تنفيذ جميع الأوامر التالية تلقائيًا:
 - نشر ملفات الإعدادات (`php artisan translations:publish-config`)
-- نشر الأصول (`php artisan translation:publish-assets`)
+- نشر الأصول (`php artisan translations:publish-assets`)
+- نشر ملفات الترحيلات (`php artisan translations:publish-migrations`)
 - تشغيل الترحيلات (`php artisan migrate`)
 - استيراد الترجمات الموجودة (`php artisan translation:import`)
 - البحث عن مفاتيح الترجمة في التطبيق (`php artisan translation:find`)
@@ -36,6 +37,7 @@ composer require dev-3bdulrahman/translation-dashboard
 When installing the package, all of the following commands will be executed automatically:
 - Publish configuration files (`php artisan translations:publish-config`)
 - Publish assets (`php artisan translations:publish-assets`)
+- Publish migration files (`php artisan translations:publish-migrations`)
 - Run migrations (`php artisan migrate`)
 - Import existing translations (`php artisan translation:import`)
 - Find translation keys in your application (`php artisan translation:find`)
@@ -46,6 +48,7 @@ You don't need to run any commands manually - just install the package and you'r
 > ```bash
 > php artisan translations:publish-config
 > php artisan translations:publish-assets
+> php artisan translations:publish-migrations
 > php artisan migrate
 > php artisan translation:import
 > php artisan translation:find
@@ -82,8 +85,9 @@ You don't need to run any commands manually - just install the package and you'r
 - `php artisan translation:export`: Export translations to the application.
 - `php artisan translation:clean`: Clean the translation database.
 - `php artisan translation:reset`: Reset the translation database.
-- `php artisan translation:publish-assets`: Publish assets for the Translation Dashboard.
-- `php artisan translation:publish-config`: Publish the configuration file.
+- `php artisan translations:publish-assets`: Publish assets for the Translation Dashboard.
+- `php artisan translations:publish-config`: Publish the configuration file.
+- `php artisan translations:publish-migrations`: Publish migration files.
 
 ## Configuration
 
@@ -97,7 +101,7 @@ If you're having issues with assets not loading:
 
 1. Make sure you've published the assets:
    ```bash
-   php artisan translation:publish-assets
+   php artisan translations:publish-assets
    ```
 
 2. Check that the assets exist in the `public/translation-dashboard` directory.

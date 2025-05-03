@@ -51,6 +51,7 @@
     "post-package-install": [
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
+      "@php artisan translations:publish-migrations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
@@ -58,6 +59,7 @@
     "post-update-cmd": [
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
+      "@php artisan translations:publish-migrations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
@@ -66,6 +68,7 @@
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
+      "@php artisan translations:publish-migrations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
@@ -73,6 +76,7 @@
     "post-install-cmd": [
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
+      "@php artisan translations:publish-migrations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
