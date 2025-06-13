@@ -334,7 +334,7 @@
                     <?php } ?>
                     <?php if ($deleteEnabled) { ?>
                         <td>
-                            <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postDelete', [$group, $key]); ?>"
+                            <a href="<?php echo url(config('translation-manager.route.prefix', 'translations') . '/delete/' . urlencode($group) . '/' . urlencode($key)); ?>"
                                class="delete-key"
                                data-confirm="Are you sure you want to delete the translations for '<?php echo htmlentities($key, ENT_QUOTES, 'UTF-8', false); ?>?">
                                <i class="fas fa-trash-alt"></i>

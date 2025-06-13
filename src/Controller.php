@@ -103,10 +103,10 @@ class Controller extends BaseController
         }
     }
 
-    public function postDelete($group, $key)
+    public function postDelete($groupKey, $translationKey)
     {
-        if(!in_array($group, $this->manager->getConfig('exclude_groups')) && $this->manager->getConfig('delete_enabled')) {
-            Translation::where('group', $group)->where('key', $key)->delete();
+        if(!in_array($groupKey, $this->manager->getConfig('exclude_groups')) && $this->manager->getConfig('delete_enabled')) {
+            Translation::where('group', $groupKey)->where('key', $translationKey)->delete();
             return ['status' => 'ok'];
         }
     }
