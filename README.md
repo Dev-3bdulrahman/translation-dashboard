@@ -88,6 +88,7 @@ You don't need to run any commands manually - just install the package and you'r
 - `php artisan translations:publish-assets`: Publish assets for the Translation Dashboard.
 - `php artisan translations:publish-config`: Publish the configuration file.
 - `php artisan translations:publish-migrations`: Publish migration files.
+- `php artisan translations:publish-translations`: Publish translation files for the dashboard interface.
 
 ## Configuration
 

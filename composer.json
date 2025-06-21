@@ -1,7 +1,7 @@
 {
   "name": "dev-3bdulrahman/translation-dashboard",
   "description": "Modern Laravel Translation Dashboard",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "keywords": [
     "laravel",
     "translations",
@@ -29,7 +29,10 @@
   "autoload": {
     "psr-4": {
       "Dev3bdulrahman\\TranslationDashboard\\": "src/"
-    }
+    },
+    "files": [
+      "src/helpers.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
@@ -52,6 +55,7 @@
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
       "@php artisan translations:publish-migrations --ansi",
+      "@php artisan translations:publish-translations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
@@ -60,6 +64,7 @@
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
       "@php artisan translations:publish-migrations --ansi",
+      "@php artisan translations:publish-translations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
@@ -69,6 +74,7 @@
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
       "@php artisan translations:publish-migrations --ansi",
+      "@php artisan translations:publish-translations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"
@@ -77,6 +83,7 @@
       "@php artisan translations:publish-config --ansi",
       "@php artisan translations:publish-assets --ansi",
       "@php artisan translations:publish-migrations --ansi",
+      "@php artisan translations:publish-translations --ansi",
       "@php artisan migrate --force --ansi",
       "@php artisan translation:import --ansi",
       "@php artisan translation:find --ansi"

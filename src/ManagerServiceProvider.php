@@ -66,6 +66,11 @@ class ManagerServiceProvider extends ServiceProvider {
             return new Console\PublishMigrationsCommand();
         });
         $this->commands('command.translation-manager.publish-migrations');
+
+        $this->app->singleton('command.translation-manager.publish-translations', function () {
+            return new Console\PublishTranslationsCommand();
+        });
+        $this->commands('command.translation-manager.publish-translations');
 	}
 
     /**
@@ -109,7 +114,8 @@ class ManagerServiceProvider extends ServiceProvider {
             'command.translation-manager.clean',
             'command.translation-manager.publish-assets',
             'command.translation-manager.publish-config',
-            'command.translation-manager.publish-migrations'
+            'command.translation-manager.publish-migrations',
+            'command.translation-manager.publish-translations'
         );
 	}
 

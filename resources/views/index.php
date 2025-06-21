@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Translation Dashboard</title>
+    <title><?php echo translation_dashboard_trans('title'); ?></title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjY3ZWVhO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6Izc2NGJhMjtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjA5M2ZiO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjgiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+Cjx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkE8L3RleHQ+CjxjaXJjbGUgY3g9IjI0IiBjeT0iOCIgcj0iNCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+Cjx0ZXh0IHg9IjI0IiB5PSIxMSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjNjY3ZWVhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7YuTwvdGV4dD4KPC9zdmc+">
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjY3ZWVhO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6Izc2NGJhMjtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjA5M2ZiO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjgiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+Cjx0ZXh0IHg9IjE2IiB5PSIyMiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkE8L3RleHQ+CjxjaXJjbGUgY3g9IjI0IiBjeT0iOCIgcj0iNCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+Cjx0ZXh0IHg9IjI0IiB5PSIxMSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjNjY3ZWVhIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7YuTwvdGV4dD4KPC9zdmc+">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo translation_dashboard_asset('css/bootstrap.min.css'); ?>">
     <!-- Font Awesome CSS -->
@@ -74,7 +76,33 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
+            direction: <?php echo translation_dashboard_is_rtl() ? 'rtl' : 'ltr'; ?>;
         }
+
+        /* RTL Support */
+        <?php if (translation_dashboard_is_rtl()): ?>
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Arial, sans-serif;
+        }
+
+        .navbar-brand::before {
+            margin-right: 0;
+            margin-left: 0.3rem;
+        }
+
+        .btn {
+            gap: 0.5rem;
+        }
+
+        .form-section h3 i {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
+
+        .d-flex.gap-3 {
+            flex-direction: row-reverse;
+        }
+        <?php endif; ?>
 
         .container-fluid {
             background: rgba(255, 255, 255, 0.95);
@@ -87,41 +115,150 @@
         }
 
         .navbar {
-            background: linear-gradient(135deg, rgba(45, 55, 72, 0.95) 0%, rgba(45, 55, 72, 0.98) 100%) !important;
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%) !important;
+            backdrop-filter: blur(25px);
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, #667eea, #764ba2, #f093fb) 1;
+            padding: 0.6rem 2rem;
             border-radius: 20px 20px 0 0;
             margin-bottom: 0;
-            min-height: 50px;
-            height: 50px;
+            min-height: 55px;
+            height: 55px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: navbarShine 4s ease-in-out infinite;
+        }
+
+        .navbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            animation: gradientMove 3s ease-in-out infinite;
+        }
+
+        @keyframes navbarShine {
+            0%, 100% { left: -100%; }
+            50% { left: 100%; }
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         .navbar-header {
             height: 100%;
             display: flex;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .navbar-brand {
-            font-weight: 600;
+            font-weight: 700;
             color: white !important;
-            font-size: 1.1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: none;
+            font-size: 1.2rem;
             margin: 0;
             padding: 0;
             line-height: 1.2;
             height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+            text-decoration: none;
+            color: white !important;
+        }
+
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            margin-right: 0.5rem;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .brand-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .brand-credit {
+            position: absolute;
+            bottom: -18px;
+            right: 0;
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .brand-credit a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .brand-credit a:hover {
+            color: #667eea;
+            text-decoration: none;
+            text-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
         }
 
         .navbar-toggle {
-            margin-top: 8px;
-            margin-bottom: 8px;
-            padding: 4px 6px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 6px 8px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-toggle:hover {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%);
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: scale(1.1);
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-toggle:hover .icon-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
         }
 
         .container-fluid > div:not(.navbar) {
@@ -404,18 +541,32 @@
             .navbar {
                 padding: 0.4rem 1rem;
                 border-radius: 16px 16px 0 0;
-                min-height: 45px;
-                height: 45px;
+                min-height: 50px;
+                height: 50px;
             }
 
             .navbar-brand {
                 font-size: 1rem;
             }
 
+            .brand-logo {
+                width: 24px;
+                height: 24px;
+                margin-right: 0.3rem;
+            }
+
+            .brand-text {
+                font-size: 1rem;
+            }
+
+            .brand-credit {
+                display: none;
+            }
+
             .navbar-toggle {
-                margin-top: 6px;
-                margin-bottom: 6px;
-                padding: 3px 5px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                padding: 4px 6px;
             }
 
             .container-fluid > div:not(.navbar) {
@@ -851,13 +1002,41 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex'); ?>" class="navbar-brand">
-                Translation Dashboard
+                <svg class="brand-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Main circle background -->
+                    <circle cx="24" cy="24" r="22" fill="url(#logoGradient)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                    <!-- Globe lines -->
+                    <path d="M6 24 C6 24, 12 12, 24 12 C36 12, 42 24, 42 24" stroke="url(#textGradient)" stroke-width="2" fill="none" opacity="0.8"/>
+                    <path d="M6 24 C6 24, 12 36, 24 36 C36 36, 42 24, 42 24" stroke="url(#textGradient)" stroke-width="2" fill="none" opacity="0.8"/>
+                    <line x1="24" y1="2" x2="24" y2="46" stroke="url(#textGradient)" stroke-width="2" opacity="0.6"/>
+                    <line x1="2" y1="24" x2="46" y2="24" stroke="url(#textGradient)" stroke-width="2" opacity="0.6"/>
+                    <!-- Center letter A -->
+                    <text x="24" y="32" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="bold" fill="url(#textGradient)" text-anchor="middle">A</text>
+                    <!-- Translation symbols -->
+                    <circle cx="35" cy="13" r="6" fill="rgba(255,255,255,0.9)" opacity="0.9"/>
+                    <text x="35" y="17" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#667eea" text-anchor="middle">ع</text>
+                </svg>
+                <span class="brand-text"><?php echo translation_dashboard_trans('title'); ?></span>
+                <div class="brand-credit">
+                    <?php echo translation_dashboard_trans('powered_by'); ?> <a href="https://3bdulrahman.com" target="_blank" rel="noopener">Abdulrahman</a>
+                </div>
             </a>
         </div>
     </div>
 </header>
 <div class="container-fluid">
-    <p>Warning, translations are not visible until they are exported back to the app/lang file, using <code>php artisan translation:export</code> command or publish button.</p>
+    <p><?php echo translation_dashboard_trans('export_warning'); ?></p>
     <!-- Alerts are now handled by SweetAlert2 -->
     <?php if (isset($_SESSION['successPublish'])) { ?>
         <script>
@@ -873,21 +1052,21 @@
     <?php } ?>
     <?php if (!isset($group)) { ?>
     <div class="form-section">
-        <h3><i class="fas fa-file-import me-2"></i> Import Translations</h3>
+        <h3><i class="fas fa-file-import me-2"></i> <?php echo translation_dashboard_trans('import_translations'); ?></h3>
         <form class="form-import" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postImport'); ?>" data-remote="true" role="form">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="form-group">
-                <label for="replace-select">Import Mode</label>
+                <label for="replace-select"><?php echo translation_dashboard_trans('import_mode'); ?></label>
                 <div class="row">
                     <div class="col-sm-8">
                         <select name="replace" id="replace-select" class="form-control">
-                            <option value="0">Append new translations</option>
-                            <option value="1">Replace existing translations</option>
+                            <option value="0"><?php echo translation_dashboard_trans('append_translations'); ?></option>
+                            <option value="1"><?php echo translation_dashboard_trans('replace_translations'); ?></option>
                         </select>
                     </div>
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-success btn-block pulse" data-disable-with="Loading..">
-                            <i class="fas fa-file-import me-2"></i> Import Groups
+                        <button type="submit" class="btn btn-success btn-block pulse" data-disable-with="<?php echo translation_dashboard_trans('loading'); ?>">
+                            <i class="fas fa-file-import me-2"></i> <?php echo translation_dashboard_trans('import_groups'); ?>
                         </button>
                     </div>
                 </div>
@@ -896,13 +1075,13 @@
     </div>
 
     <div class="form-section">
-        <h3><i class="fas fa-search me-2"></i> Find Translations</h3>
-        <form class="form-find" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postFind'); ?>" data-remote="true" role="form" data-confirm="Are you sure you want to scan you app folder? All found translation keys will be added to the database.">
+        <h3><i class="fas fa-search me-2"></i> <?php echo translation_dashboard_trans('find_translations'); ?></h3>
+        <form class="form-find" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postFind'); ?>" data-remote="true" role="form" data-confirm="<?php echo translation_dashboard_trans('find_confirm'); ?>">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="form-group">
-                <p class="text-muted mb-3">Scan your application folder to find all translation keys and add them to the database.</p>
-                <button type="submit" class="btn btn-info" data-disable-with="Searching..">
-                    <i class="fas fa-search me-2"></i> Find Translations in Files
+                <p class="text-muted mb-3"><?php echo translation_dashboard_trans('find_description'); ?></p>
+                <button type="submit" class="btn btn-info" data-disable-with="<?php echo translation_dashboard_trans('searching'); ?>">
+                    <i class="fas fa-search me-2"></i> <?php echo translation_dashboard_trans('find_in_files'); ?>
                 </button>
             </div>
         </form>
@@ -911,17 +1090,17 @@
 
     <?php if (isset($group)) { ?>
     <div class="form-section">
-        <h3><i class="fas fa-upload me-2"></i> Publish Translations</h3>
-        <form class="form-publish" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postPublish', $group); ?>" data-remote="true" role="form" data-confirm="Are you sure you want to publish the translations group '<?php echo $group; ?>? This will overwrite existing language files.">
+        <h3><i class="fas fa-upload me-2"></i> <?php echo translation_dashboard_trans('publish_translations'); ?></h3>
+        <form class="form-publish" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postPublish', $group); ?>" data-remote="true" role="form" data-confirm="<?php echo translation_dashboard_trans('publish_confirm', ['group' => $group]); ?>">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="form-group">
-                <p class="text-muted mb-3">Export translations back to your Laravel application files.</p>
+                <p class="text-muted mb-3"><?php echo translation_dashboard_trans('publish_description'); ?></p>
                 <div class="d-flex gap-3">
-                    <button type="submit" class="btn btn-info" data-disable-with="Publishing..">
-                        <i class="fas fa-upload me-2"></i> Publish Translations
+                    <button type="submit" class="btn btn-info" data-disable-with="<?php echo translation_dashboard_trans('publishing'); ?>">
+                        <i class="fas fa-upload me-2"></i> <?php echo translation_dashboard_trans('publish_translations'); ?>
                     </button>
                     <a href="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@getIndex'); ?>" class="btn btn-default">
-                        <i class="fas fa-arrow-left me-2"></i> Back
+                        <i class="fas fa-arrow-left me-2"></i> <?php echo translation_dashboard_trans('back'); ?>
                     </a>
                 </div>
             </div>
@@ -929,12 +1108,12 @@
     </div>
     <?php } ?>
     <div class="form-section">
-        <h3><i class="fas fa-layer-group me-2"></i> Translation Groups</h3>
+        <h3><i class="fas fa-layer-group me-2"></i> <?php echo translation_dashboard_trans('translation_groups'); ?></h3>
         <form role="form" method="POST" action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAddGroup'); ?>">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="form-group">
-                <label for="group-select">Select Translation Group</label>
-                <p class="text-muted mb-3">Choose a group to display the group translations. If no groups are visible, make sure you have run the migrations and imported the translations.</p>
+                <label for="group-select"><?php echo translation_dashboard_trans('select_group'); ?></label>
+                <p class="text-muted mb-3"><?php echo translation_dashboard_trans('select_group_description'); ?></p>
                 <select name="group" id="group" class="form-control group-select">
                     <?php foreach ($groups as $key => $value) { ?>
                         <option value="<?php echo $key; ?>"<?php echo $key == $group ? ' selected' : ''; ?>><?php echo $value; ?></option>
@@ -942,15 +1121,15 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="new-group">Create New Group</label>
-                <p class="text-muted mb-3">Enter a new group name and start editing translations in that group.</p>
+                <label for="new-group"><?php echo translation_dashboard_trans('create_new_group'); ?></label>
+                <p class="text-muted mb-3"><?php echo translation_dashboard_trans('create_group_description'); ?></p>
                 <div class="row">
                     <div class="col-sm-8">
-                        <input type="text" id="new-group" class="form-control" name="new-group" placeholder="Enter new group name..." />
+                        <input type="text" id="new-group" class="form-control" name="new-group" placeholder="<?php echo translation_dashboard_trans('new_group_placeholder'); ?>" />
                     </div>
                     <div class="col-sm-4">
                         <button type="submit" class="btn btn-primary btn-block" name="add-group">
-                            <i class="fas fa-plus me-2"></i> Add Group
+                            <i class="fas fa-plus me-2"></i> <?php echo translation_dashboard_trans('add_group'); ?>
                         </button>
                     </div>
                 </div>
@@ -959,21 +1138,21 @@
     </div>
     <?php if ($group) { ?>
     <div class="form-section">
-        <h3><i class="fas fa-plus-circle me-2"></i> Add New Keys</h3>
+        <h3><i class="fas fa-plus-circle me-2"></i> <?php echo translation_dashboard_trans('add_new_keys'); ?></h3>
         <form action="<?php echo action('\Dev3bdulrahman\TranslationDashboard\Controller@postAdd', [$group]); ?>" method="POST" role="form">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="form-group">
-                <label for="keys-textarea">Translation Keys</label>
-                <p class="text-muted mb-3">Add one key per line, without the group prefix. For example: "welcome_message" instead of "auth.welcome_message"</p>
-                <textarea id="keys-textarea" class="form-control" rows="4" name="keys" placeholder="welcome_message&#10;login_button&#10;logout_text"></textarea>
+                <label for="keys-textarea"><?php echo translation_dashboard_trans('translation_keys'); ?></label>
+                <p class="text-muted mb-3"><?php echo translation_dashboard_trans('keys_description'); ?></p>
+                <textarea id="keys-textarea" class="form-control" rows="4" name="keys" placeholder="<?php echo translation_dashboard_trans('keys_placeholder'); ?>"></textarea>
             </div>
             <div class="form-group">
                 <div class="d-flex gap-3">
                     <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-plus me-2"></i> Add Keys
+                        <i class="fas fa-plus me-2"></i> <?php echo translation_dashboard_trans('add_keys'); ?>
                     </button>
                     <button type="button" class="btn btn-info enable-auto-translate-group">
-                        <i class="fas fa-language me-2"></i> Use Auto Translate
+                        <i class="fas fa-language me-2"></i> <?php echo translation_dashboard_trans('use_auto_translate'); ?>
                     </button>
                 </div>
             </div>
@@ -1112,7 +1291,7 @@
 </div>
 
 <!-- Floating Action Button -->
-<button class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Scroll to top">
+<button class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="<?php echo translation_dashboard_trans('scroll_to_top'); ?>">
     <i class="fas fa-arrow-up"></i>
 </button>
 
