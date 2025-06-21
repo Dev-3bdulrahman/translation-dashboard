@@ -1,7 +1,7 @@
 {
   "name": "dev-3bdulrahman/translation-dashboard",
   "description": "Modern Laravel Translation Dashboard",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "keywords": [
     "laravel",
     "translations",

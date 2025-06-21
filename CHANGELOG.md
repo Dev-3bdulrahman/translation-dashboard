@@ -2,6 +2,19 @@
 
 All notable changes to the Translation Dashboard package will be documented in this file.
 
+## [2.1.1] - 2024-12-21
+
+### Bug Fixes
+- **Fixed Helper Functions Conflict**: Resolved "Cannot redeclare function" error
+- **Enhanced Error Handling**: Improved exception handling in helper functions
+- **Better Laravel Integration**: More robust Laravel function availability checks
+- **Safer Function Loading**: Added proper existence checks for all helper functions
+
+### Technical Improvements
+- **Exception Safety**: Using Throwable instead of Exception for better compatibility
+- **Fallback Mechanisms**: Enhanced fallback logic for non-Laravel environments
+- **Code Stability**: Improved error handling and function declarations
+
 ## [2.1.0] - 2024-12-21
 
 ### Premium Header Design & Multilingual Support
