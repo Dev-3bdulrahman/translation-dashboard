@@ -91,4 +91,25 @@ return [
     
     // Scroll
     'scroll_to_top' => 'Scroll to top',
+
+    // SweetAlert Messages
+    'confirm_title' => 'Are you sure?',
+    'confirm_text' => 'You won\'t be able to revert this!',
+    'yes_delete' => 'Yes, delete it!',
+    'yes_publish' => 'Yes, publish it!',
+    'yes_continue' => 'Yes, continue!',
+    'cancel' => 'Cancel',
+    'error_title' => 'Error!',
+    'error_text' => 'Something went wrong!',
+    'success_title' => 'Success!',
+    'warning_title' => 'Warning!',
+    'info_title' => 'Information',
+    'deleted' => 'Deleted!',
+    'delete_success' => 'The translation has been deleted.',
+    'import_success' => 'Done importing, processed :count items!',
+    'find_success' => 'Done searching for translations, found :count items!',
+    'publish_success' => 'Done publishing the translations for group ":group"!',
+    'publish_all_success' => 'Done publishing the translations for all groups!',
+    'reload_page' => 'Reload Page',
+    'published' => 'Published!',
 ];

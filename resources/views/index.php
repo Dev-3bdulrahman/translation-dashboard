@@ -936,13 +936,14 @@
                 var confirmMessage = $(this).data('confirm');
 
                 Swal.fire({
-                    title: 'Are you sure?',
+                    title: '<?php echo translation_dashboard_trans('confirm_title'); ?>',
                     text: confirmMessage,
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#d33',
                     cancelButtonColor: '#3085d6',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: '<?php echo translation_dashboard_trans('yes_delete'); ?>',
+                    cancelButtonText: '<?php echo translation_dashboard_trans('cancel'); ?>'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.post(url, {id: id}, function(){
@@ -954,8 +955,8 @@
                             Swal.fire({
                                 position: 'top-end',
                                 icon: 'success',
-                                title: 'Deleted!',
-                                text: 'The translation has been deleted.',
+                                title: '<?php echo translation_dashboard_trans('deleted'); ?>',
+                                text: '<?php echo translation_dashboard_trans('delete_success'); ?>',
                                 showConfirmButton: false,
                                 timer: 1500
                             });
@@ -968,11 +969,11 @@
 
             $('.form-import').on('ajax:success', function (e, data) {
                 Swal.fire({
-                    title: 'Success!',
-                    text: 'Done importing, processed ' + data.counter + ' items!',
+                    title: '<?php echo translation_dashboard_trans('success_title'); ?>',
+                    text: '<?php echo str_replace(':count', '" + data.counter + "', translation_dashboard_trans('import_success')); ?>',
                     icon: 'success',
                     confirmButtonColor: '#28a745',
-                    confirmButtonText: 'Reload Page'
+                    confirmButtonText: '<?php echo translation_dashboard_trans('reload_page'); ?>'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.reload();
@@ -982,11 +983,11 @@
 
             $('.form-find').on('ajax:success', function (e, data) {
                 Swal.fire({
-                    title: 'Success!',
-                    text: 'Done searching for translations, found ' + data.counter + ' items!',
+                    title: '<?php echo translation_dashboard_trans('success_title'); ?>',
+                    text: '<?php echo str_replace(':count', '" + data.counter + "', translation_dashboard_trans('find_success')); ?>',
                     icon: 'success',
                     confirmButtonColor: '#17a2b8',
-                    confirmButtonText: 'Reload Page'
+                    confirmButtonText: '<?php echo translation_dashboard_trans('reload_page'); ?>'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.reload();
@@ -996,8 +997,8 @@
 
             $('.form-publish').on('ajax:success', function (e, data) {
                 Swal.fire({
-                    title: 'Published!',
-                    text: 'Done publishing the translations for group "<?php echo isset($group) ? $group : ''; ?>"!',
+                    title: '<?php echo translation_dashboard_trans('published'); ?>',
+                    text: '<?php echo str_replace(':group', isset($group) ? $group : '', translation_dashboard_trans('publish_success')); ?>',
                     icon: 'success',
                     confirmButtonColor: '#17a2b8',
                     timer: 2000,
@@ -1008,8 +1009,8 @@
 
             $('.form-publish-all').on('ajax:success', function (e, data) {
                 Swal.fire({
-                    title: 'Published!',
-                    text: 'Done publishing the translations for all groups!',
+                    title: '<?php echo translation_dashboard_trans('published'); ?>',
+                    text: '<?php echo translation_dashboard_trans('publish_all_success'); ?>',
                     icon: 'success',
                     confirmButtonColor: '#007bff',
                     timer: 2000,
@@ -1084,7 +1085,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
-                    title: 'Success!',
+                    title: '<?php echo translation_dashboard_trans('success_title'); ?>',
                     text: '<?php echo $_SESSION['successPublish']; ?>',
                     icon: 'success',
                     confirmButtonColor: '#3085d6'

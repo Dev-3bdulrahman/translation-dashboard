@@ -91,4 +91,25 @@ return [
 
     // Scroll
     'scroll_to_top' => 'التمرير إلى الأعلى',
+
+    // SweetAlert Messages
+    'confirm_title' => 'هل أنت متأكد؟',
+    'confirm_text' => 'لن تتمكن من التراجع عن هذا الإجراء!',
+    'yes_delete' => 'نعم، احذف!',
+    'yes_publish' => 'نعم، انشر!',
+    'yes_continue' => 'نعم، تابع!',
+    'cancel' => 'إلغاء',
+    'error_title' => 'خطأ!',
+    'error_text' => 'حدث خطأ ما!',
+    'success_title' => 'نجح!',
+    'warning_title' => 'تحذير!',
+    'info_title' => 'معلومات',
+    'deleted' => 'تم الحذف!',
+    'delete_success' => 'تم حذف الترجمة بنجاح.',
+    'import_success' => 'تم الاستيراد بنجاح، تمت معالجة :count عنصر!',
+    'find_success' => 'تم البحث عن الترجمات، تم العثور على :count عنصر!',
+    'publish_success' => 'تم نشر الترجمات للمجموعة ":group" بنجاح!',
+    'publish_all_success' => 'تم نشر الترجمات لجميع المجموعات بنجاح!',
+    'reload_page' => 'إعادة تحميل الصفحة',
+    'published' => 'تم النشر!',
 ];
