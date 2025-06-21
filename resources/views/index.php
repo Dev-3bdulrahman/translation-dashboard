@@ -1,4 +1,4 @@
-<?php include_once __DIR__.'/asset_helper.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +80,7 @@
         }
 
         /* RTL Support */
-        <?php if (translation_dashboard_is_rtl()): ?>
+        <?php if (translation_dashboard_is_rtl()) { ?>
         body {
             font-family: 'Inter', 'Segoe UI', Tahoma, Arial, sans-serif;
         }
@@ -102,7 +102,7 @@
         .d-flex.gap-3 {
             flex-direction: row-reverse;
         }
-        <?php endif; ?>
+        <?php } ?>
 
         .container-fluid {
             background: rgba(255, 255, 255, 0.95);

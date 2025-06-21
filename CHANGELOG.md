@@ -2,6 +2,19 @@
 
 All notable changes to the Translation Dashboard package will be documented in this file.
 
+## [2.1.2] - 2024-12-21
+
+### Critical Bug Fix
+- **Removed Duplicate Helper File**: Deleted `resources/views/asset_helper.php` that was causing function redeclaration
+- **Fixed Function Conflict**: Resolved "Cannot redeclare translation_dashboard_asset()" error completely
+- **Cleaned Up Includes**: Removed obsolete include statement from index.php
+- **Consolidated Helper Functions**: All helper functions now properly loaded from `src/helpers.php` only
+
+### Technical Improvements
+- **Single Source of Truth**: Helper functions now exist in one location only
+- **Better Code Organization**: Eliminated duplicate function definitions
+- **Improved Package Stability**: No more function redeclaration conflicts
+
 ## [2.1.1] - 2024-12-21
 
 ### Bug Fixes
