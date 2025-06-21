@@ -68,7 +68,7 @@
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.6;
             color: var(--text-primary);
             min-height: 100vh;
@@ -90,20 +90,23 @@
             background: linear-gradient(135deg, rgba(45, 55, 72, 0.95) 0%, rgba(45, 55, 72, 0.98) 100%) !important;
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1rem 2rem;
+            padding: 0.75rem 2rem;
             border-radius: 20px 20px 0 0;
             margin-bottom: 0;
+            min-height: auto;
         }
 
         .navbar-brand {
-            font-weight: 700;
+            font-weight: 600;
             color: white !important;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: none;
+            margin: 0;
+            padding: 0.25rem 0;
         }
 
         .container-fluid > div:not(.navbar) {
@@ -114,7 +117,7 @@
         .btn {
             border-radius: 12px;
             padding: 0.75rem 1.5rem;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 500;
             border: none;
             cursor: pointer;
@@ -184,7 +187,7 @@
             border-radius: 12px;
             border: 2px solid var(--border-color);
             padding: 0.75rem 1rem;
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
             background: white;
         }
@@ -200,7 +203,7 @@
         }
 
         .form-group label {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
@@ -211,7 +214,7 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
-            font-size: 0.9rem;
+            font-size: 1rem;
             background: white;
             margin-top: 2rem;
         }
@@ -226,7 +229,7 @@
             border: none;
             padding: 1rem;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             letter-spacing: 0.5px;
         }
 
@@ -269,7 +272,7 @@
             padding: 1rem 1.5rem;
             margin-bottom: 1.5rem;
             border: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
             position: relative;
             overflow: hidden;
         }
@@ -304,6 +307,14 @@
             border-radius: 12px;
             border-left: 4px solid var(--warning-color);
             margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        /* Helper text styling */
+        .text-muted {
+            font-size: 0.95rem;
+            color: var(--text-secondary) !important;
+            line-height: 1.5;
         }
 
         /* Form styling improvements */
@@ -328,12 +339,12 @@
 
         /* Editable fields */
         .editable-container.editable-inline {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .editable-input textarea.form-control {
             min-height: 80px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             border-radius: 8px;
         }
 
@@ -365,6 +376,10 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
             .container-fluid {
                 margin: 10px;
                 border-radius: 16px;
@@ -372,16 +387,29 @@
             }
 
             .navbar {
-                padding: 1rem;
+                padding: 0.5rem 1rem;
                 border-radius: 16px 16px 0 0;
+            }
+
+            .navbar-brand {
+                font-size: 1.1rem;
             }
 
             .container-fluid > div:not(.navbar) {
                 padding: 1rem;
             }
 
+            .btn {
+                font-size: 0.95rem;
+                padding: 0.65rem 1.25rem;
+            }
+
             .btn:hover {
                 transform: none;
+            }
+
+            .table {
+                font-size: 0.9rem;
             }
 
             .table tbody tr:hover {
@@ -395,6 +423,14 @@
 
             .col-sm-2, .col-sm-3 {
                 min-width: 100%;
+            }
+
+            .form-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .text-muted {
+                font-size: 0.9rem;
             }
         }
 
@@ -495,7 +531,7 @@
             color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         /* Enhanced button effects */
@@ -515,7 +551,7 @@
             gap: 0.5rem;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
