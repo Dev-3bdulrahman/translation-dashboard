@@ -110,34 +110,39 @@ You don't need to run any commands manually - just install the package and you'r
 
 ## 📋 Changelog
 
-### v2.1.2 (Latest) - 2024-12-21
+### 🏷️ v2.1.2 (Latest) - 2024-12-21
 - 🚨 **Critical Fix**: Removed duplicate helper file causing function redeclaration errors
-- 🔧 **Code Cleanup**: Consolidated all helper functions to single location
+- 🧹 **Code Cleanup**: Consolidated all helper functions to single location
 - ✅ **Stability**: Eliminated all function conflict issues
+- 📚 **Documentation**: Enhanced README with comprehensive changelog
 
-### v2.1.1 - 2024-12-21
+### 🏷️ v2.1.1 - 2024-12-21
 - 🐛 **Bug Fixes**: Enhanced error handling in helper functions
-- 🔧 **Compatibility**: Better Laravel integration and fallback mechanisms
+- � **Compatibility**: Better Laravel integration and fallback mechanisms
 - 🛡️ **Safety**: Improved exception handling with Throwable
+- ⚡ **Performance**: Optimized function loading mechanisms
 
-### v2.1.0 - 2024-12-21
+### 🏷️ v2.1.0 - 2024-12-21
 - 🎨 **Premium Header**: Custom SVG logo with professional gradient effects
 - 🌐 **Multilingual Interface**: Complete English/Arabic translation system
 - 🏷️ **Branding**: Developer attribution with website link
 - 📱 **Custom Favicon**: Translation-themed browser icon
 - 🔧 **Auto-Setup**: Automatic translation file publishing
+- 🎯 **RTL Support**: Full right-to-left layout compatibility
 
-### v2.0.2 - 2024-12-21
+### 🏷️ v2.0.2 - 2024-12-21
 - 📏 **Compact Header**: Significantly reduced header size (50px/45px mobile)
 - 📝 **Better Typography**: Increased font sizes for improved readability
 - 📱 **Mobile Optimized**: Enhanced responsive design
 - 🔧 **Version Fix**: Resolved Packagist version mismatch
+- 🎯 **UX Improvements**: Better visual hierarchy and spacing
 
-### v2.0.0 - 2024-12-21
+### 🏷️ v2.0.0 - 2024-12-21
 - 🎨 **Complete UI Overhaul**: Modern design with gradients and animations
 - 📝 **Enhanced Typography**: Inter font and improved text hierarchy
 - 🎭 **Advanced Animations**: Smooth transitions and hover effects
 - 📱 **Responsive Design**: Mobile-first approach with device optimization
+- 🌈 **Visual Effects**: Custom scrollbars and floating elements
 
 ## 🚀 Installation & Updates
 
