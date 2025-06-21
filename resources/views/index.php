@@ -70,7 +70,7 @@
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 16px;
+            font-size: 17px;
             line-height: 1.6;
             color: var(--text-primary);
             min-height: 100vh;
@@ -165,8 +165,11 @@
             height: 100%;
             display: flex;
             align-items: center;
+            justify-content: <?php echo translation_dashboard_is_rtl() ? 'flex-end' : 'flex-start'; ?>;
             position: relative;
             z-index: 2;
+            width: 100%;
+            padding: 0 1rem;
         }
 
         .navbar-brand {
@@ -195,7 +198,13 @@
         .brand-logo {
             width: 32px;
             height: 32px;
+            <?php if (translation_dashboard_is_rtl()) { ?>
+            margin-left: 0.5rem;
+            margin-right: 0;
+            <?php } else { ?>
             margin-right: 0.5rem;
+            margin-left: 0;
+            <?php } ?>
             animation: logoFloat 3s ease-in-out infinite;
         }
 
@@ -215,7 +224,13 @@
         .brand-credit {
             position: absolute;
             bottom: -18px;
+            <?php if (translation_dashboard_is_rtl()) { ?>
+            left: 0;
+            right: auto;
+            <?php } else { ?>
             right: 0;
+            left: auto;
+            <?php } ?>
             font-size: 0.65rem;
             color: rgba(255, 255, 255, 0.7);
             font-weight: 400;
@@ -269,7 +284,7 @@
         .btn {
             border-radius: 12px;
             padding: 0.75rem 1.5rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 500;
             border: none;
             cursor: pointer;
@@ -339,7 +354,7 @@
             border-radius: 12px;
             border: 2px solid var(--border-color);
             padding: 0.75rem 1rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             background: white;
         }
@@ -355,7 +370,7 @@
         }
 
         .form-group label {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
@@ -366,7 +381,7 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
-            font-size: 1rem;
+            font-size: 1.1rem;
             background: white;
             margin-top: 2rem;
         }
@@ -529,7 +544,7 @@
         /* Responsive design */
         @media (max-width: 768px) {
             body {
-                font-size: 15px;
+                font-size: 16px;
             }
 
             .container-fluid {
@@ -546,17 +561,23 @@
             }
 
             .navbar-brand {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .brand-logo {
-                width: 24px;
-                height: 24px;
+                width: 28px;
+                height: 28px;
+                <?php if (translation_dashboard_is_rtl()): ?>
+                margin-left: 0.3rem;
+                margin-right: 0;
+                <?php else: ?>
                 margin-right: 0.3rem;
+                margin-left: 0;
+                <?php endif; ?>
             }
 
             .brand-text {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .brand-credit {
@@ -574,16 +595,24 @@
             }
 
             .btn {
-                font-size: 0.95rem;
-                padding: 0.65rem 1.25rem;
+                font-size: 1rem;
+                padding: 0.7rem 1.3rem;
             }
 
             .btn:hover {
                 transform: none;
             }
 
+            .form-control {
+                font-size: 1rem;
+            }
+
+            .form-group label {
+                font-size: 1rem;
+            }
+
             .table {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
 
             .table tbody tr:hover {
@@ -600,11 +629,11 @@
             }
 
             .form-section h3 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .text-muted {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
 
@@ -705,7 +734,7 @@
             color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 1.5rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         /* Enhanced button effects */
@@ -993,7 +1022,6 @@
     <div class="animated-bg"></div>
     <div class="container-fluid">
 <header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
-    <div class="container-fluid">
         <div class="navbar-header">
             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -1033,7 +1061,6 @@
                 </div>
             </a>
         </div>
-    </div>
 </header>
 <div class="container-fluid">
     <p><?php echo translation_dashboard_trans('export_warning'); ?></p>
