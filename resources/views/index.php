@@ -186,6 +186,12 @@
             gap: 0.5rem;
             transition: all 0.3s ease;
             text-decoration: none;
+            float: none !important;
+            <?php if (translation_dashboard_is_rtl()) { ?>
+            flex-direction: row-reverse;
+            <?php } else { ?>
+            flex-direction: row;
+            <?php } ?>
         }
 
         .navbar-brand:hover {
@@ -222,19 +228,12 @@
         }
 
         .brand-credit {
-            position: absolute;
-            bottom: -18px;
-            <?php if (translation_dashboard_is_rtl()) { ?>
-            left: 0;
-            right: auto;
-            <?php } else { ?>
-            right: 0;
-            left: auto;
-            <?php } ?>
-            font-size: 0.65rem;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
             font-weight: 400;
             white-space: nowrap;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
         }
 
         .brand-credit a {
@@ -396,7 +395,7 @@
             border: none;
             padding: 1rem;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 1rem;
             letter-spacing: 0.5px;
         }
 
@@ -439,7 +438,7 @@
             padding: 1rem 1.5rem;
             margin-bottom: 1.5rem;
             border: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             position: relative;
             overflow: hidden;
         }
@@ -479,7 +478,7 @@
 
         /* Helper text styling */
         .text-muted {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--text-secondary) !important;
             line-height: 1.5;
         }
@@ -506,12 +505,12 @@
 
         /* Editable fields */
         .editable-container.editable-inline {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         .editable-input textarea.form-control {
             min-height: 80px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             border-radius: 8px;
         }
 
@@ -567,13 +566,13 @@
             .brand-logo {
                 width: 28px;
                 height: 28px;
-                <?php if (translation_dashboard_is_rtl()): ?>
+                <?php if (translation_dashboard_is_rtl()) { ?>
                 margin-left: 0.3rem;
                 margin-right: 0;
-                <?php else: ?>
+                <?php } else { ?>
                 margin-right: 0.3rem;
                 margin-left: 0;
-                <?php endif; ?>
+                <?php } ?>
             }
 
             .brand-text {
@@ -633,6 +632,22 @@
             }
 
             .text-muted {
+                font-size: 1rem;
+            }
+
+            .alert {
+                font-size: 1rem;
+            }
+
+            .status-indicator {
+                font-size: 0.95rem;
+            }
+
+            .editable-container.editable-inline {
+                font-size: 1rem;
+            }
+
+            .editable-input textarea.form-control {
                 font-size: 1rem;
             }
         }
@@ -754,7 +769,7 @@
             gap: 0.5rem;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 500;
         }
 
