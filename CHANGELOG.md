@@ -2,6 +2,26 @@
 
 All notable changes to the Translation Dashboard package will be documented in this file.
 
+## [2.0.2] - 2024-12-21
+
+### Header Size Optimization
+- **Significantly Reduced Header Height**: From default to 50px (45px on mobile)
+- **Compact Navigation**: Optimized padding and spacing for minimal header footprint
+- **Better Space Utilization**: More content visible on screen
+- **Mobile Optimization**: Even smaller header on mobile devices
+- **Improved Toggle Button**: Better sizing and positioning
+
+### Version Management
+- **Fixed Packagist Version Mismatch**: Resolved composer.json version conflicts
+- **Proper Semantic Versioning**: Aligned all version files
+
+## [2.0.1] - 2024-12-21
+
+### Typography & UI Improvements
+- **Enhanced Font Sizes**: Increased base font size to 16px for better readability
+- **Improved Text Hierarchy**: Better font sizing across all components
+- **Responsive Typography**: Optimized font sizes for mobile devices
+
 ## [2.0.0] - 2024-12-21
 
 ### Major UI/UX Overhaul

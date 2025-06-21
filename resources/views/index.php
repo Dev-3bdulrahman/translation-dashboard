@@ -90,23 +90,38 @@
             background: linear-gradient(135deg, rgba(45, 55, 72, 0.95) 0%, rgba(45, 55, 72, 0.98) 100%) !important;
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.75rem 2rem;
+            padding: 0.5rem 1.5rem;
             border-radius: 20px 20px 0 0;
             margin-bottom: 0;
-            min-height: auto;
+            min-height: 50px;
+            height: 50px;
+        }
+
+        .navbar-header {
+            height: 100%;
+            display: flex;
+            align-items: center;
         }
 
         .navbar-brand {
             font-weight: 600;
             color: white !important;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: none;
             margin: 0;
-            padding: 0.25rem 0;
+            padding: 0;
+            line-height: 1.2;
+            height: auto;
+        }
+
+        .navbar-toggle {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding: 4px 6px;
         }
 
         .container-fluid > div:not(.navbar) {
@@ -387,12 +402,20 @@
             }
 
             .navbar {
-                padding: 0.5rem 1rem;
+                padding: 0.4rem 1rem;
                 border-radius: 16px 16px 0 0;
+                min-height: 45px;
+                height: 45px;
             }
 
             .navbar-brand {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+
+            .navbar-toggle {
+                margin-top: 6px;
+                margin-bottom: 6px;
+                padding: 3px 5px;
             }
 
             .container-fluid > div:not(.navbar) {
