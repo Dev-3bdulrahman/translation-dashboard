@@ -2,6 +2,35 @@
 
 All notable changes to the Translation Dashboard package will be documented in this file.
 
+## [2.1.3] - 2024-12-21
+
+### Enhanced Typography & RTL Support
+- **Improved Font Sizes**: Increased base font size to 17px for better readability
+- **Enhanced Button Typography**: Improved button font size to 1.1rem
+- **Better Form Elements**: Enhanced form control and label font sizes to 1.1rem
+- **Improved Table Typography**: Increased table and header font sizes
+- **Enhanced Alert Messages**: Improved alert and helper text font sizes
+
+### Complete RTL Layout Fix
+- **Fixed Logo Positioning**: Removed float:left to enable proper RTL positioning
+- **Correct Logo Placement**: Logo now appears on right side for Arabic (RTL) languages
+- **Enhanced Navbar Layout**: Improved flex-direction control for RTL languages
+- **Better Brand Credit**: Moved "Powered by Abdulrahman" to appear beside logo
+- **Responsive RTL Design**: Enhanced mobile layout for RTL languages
+
+### Complete SweetAlert Translation
+- **Full Translation Support**: All SweetAlert messages now translatable
+- **Confirmation Dialogs**: Translated "Are you sure?", "Yes, delete!", "Cancel" buttons
+- **Success Messages**: Translated all success notifications (Published!, Deleted!, etc.)
+- **Dynamic Content**: Support for variable replacement (:count, :group placeholders)
+- **Consistent Messaging**: Unified user experience across English and Arabic
+
+### Technical Improvements
+- **Better Flex Layout**: Enhanced navbar-header alignment for both LTR and RTL
+- **Improved Responsive Design**: Better mobile experience with proper font scaling
+- **Enhanced Visual Hierarchy**: Improved font sizes across all interface elements
+- **Better Accessibility**: Larger, more readable fonts throughout the interface
+
 ## [2.1.2] - 2024-12-21
 
 ### Critical Bug Fix
