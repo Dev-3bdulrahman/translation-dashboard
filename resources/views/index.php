@@ -165,7 +165,7 @@
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: <?php echo translation_dashboard_is_rtl() ? 'flex-end' : 'flex-start'; ?>;
+            justify-content: flex-start;
             position: relative;
             z-index: 2;
             width: 100%;
@@ -1073,7 +1073,7 @@
                 </svg>
                 <span class="brand-text"><?php echo translation_dashboard_trans('title'); ?></span>
                 <div class="brand-credit">
-                    <?php echo translation_dashboard_trans('powered_by'); ?> <a href="https://3bdulrahman.com" target="_blank" rel="noopener">Abdulrahman</a>
+                    <a href="https://3bdulrahman.com" target="_blank" rel="noopener"><?php echo translation_dashboard_trans('powered_by'); ?> : Abdulrahman</a>
                 </div>
             </a>
         </div>
